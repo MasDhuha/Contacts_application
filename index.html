@@ -9,6 +9,9 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
+		<!-- Own styles -->
+		<link rel="stylesheet" href="css/main.css">
+
 		<!-- React libraries -->
 		<script src="https://unpkg.com/react@15/dist/react.js"></script>
 		<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
@@ -18,8 +21,13 @@
 	</head>
 	<body>
 
-		<div class="container" id="main_cont">
-			
+		<div class="container">
+			<div class="col-md-6 offset-md-3">
+				<input id="number_input" type="text" placeholder="Enter the number">
+				<div id="contacts">
+					
+				</div>
+			</div>
 		</div>
 
 
@@ -30,10 +38,16 @@
 
 		
 		<script type="text/babel">
+			
+			<!-- Create contact noticies -->
+			var CONTACTS = [];
+
+			<!-- Just testing -->
 			ReactDOM.render(
 			  <h1>Hello, world!</h1>,
-			  document.getElementById('main_cont')
+			  document.getElementById('contacts')
 			);
+			
 		</script>
 
 	</body>
