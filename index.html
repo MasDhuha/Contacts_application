@@ -25,7 +25,7 @@
 			<div class="col-md-6 offset-md-3">
 				<input id="number_input" type="text" placeholder="Enter the number">
 				<div id="contacts">
-					
+
 				</div>
 			</div>
 		</div>
@@ -36,18 +36,59 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-		
+
 		<script type="text/babel">
-			
+
 			<!-- Create contact noticies -->
-			var CONTACTS = [];
+			var CONTACTS = [
+						{
+                id: 1,
+                name: 'Darth Vader',
+                phoneNumber: '+250966666666',
+                image: 'img/darth.gif'
+            },
+						{
+                id: 2,
+                name: 'Princess Leia',
+                phoneNumber: '+250966344466',
+                image: 'img/leia.gif'
+            },
+						{
+                id: 3,
+                name: 'Luke Skywalker',
+                phoneNumber: '+250976654433',
+                image: 'img/luke.gif'
+            },
+						{
+                id: 4,
+                name: 'Chewbacca',
+                phoneNumber: '+250456784935',
+                image: 'img/chewbacca.gif'
+            }
+					];
 
 			<!-- Just testing -->
 			ReactDOM.render(
 			  <h1>Hello, world!</h1>,
 			  document.getElementById('contacts')
 			);
-			
+
+			var ContactsList = React.createClass({
+				render: function() {
+					return (
+						<div>
+							<ul>
+								{
+									CONTACTS.map(function(el) {
+										return <li> (el.name) </li>
+									})
+								}
+							</ul>
+						</div>
+					)
+				}
+			});
+
 		</script>
 
 	</body>
